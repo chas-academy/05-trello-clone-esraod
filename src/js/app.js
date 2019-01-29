@@ -64,7 +64,6 @@ const jtrello = (function() {
     event.preventDefault();
     console.log("This should create a new card");
 
-   
     var value = $(this).find('input').val();
     $(this).parent('.add-new').before('<li class="card">'+ value + '<button class="button delete">X</button>' + '</li>');
     $(this).find('input').val(null);
@@ -72,7 +71,7 @@ const jtrello = (function() {
 
   function deleteCard() {
     console.log("This should delete the card you clicked on");
-    $('.card').remove();
+    $(this).parent('.card').remove();
   }
 
   // Metod för att rita ut element i DOM:en
