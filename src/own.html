@@ -13,79 +13,34 @@
     <div id="theTop"> 
         <h1>  KANBAN </h1>  
         <form class ="fixthis" id="list-creation-dialog" title="Create new list" style="height: 40px"> 
-                <button id="srtBtn" class="beutton">Add new list</button>
-                <input id="input-list-cd" type="text" name="title" placeholder="List title" />
-            </form>
-           
-               
+            <button id="srtBtn" class="button">Add new list</button>
+            <input id="input-list-cd" type="text" name="title" placeholder="List title..." />
+        </form>
     </div>
+
     <!--
-        <div id="list-creation-dialog" title="Create new list" style="height: 40px">
+    <div id="list-creation-dialog" title="Create new list" style="height: 40px">
             <form id="list-cd"> 
                 <input id="input-list-cd" type="text" name="title" placeholder="List title" />
-            </form>
-           
+            </form>      
     </div>
--->
+    -->
 
     <div class="board">
+
             <div class="column">
                     <div class="list">
                         <div class="list-header">
                             Todo
                             <button class="button delete">X</button>
                         </div>
-                        <ul class="list-cards">
-                            <li class="card">
-                                Improvements for the project
-                                <button class="button delete">X</button>
-                            </li>
-                            <li class="card">
-                                    Creating a logotype
-                                    <button class="button delete">X</button>
-                            </li>
-                            <li class="add-new">
-                                <form class="new-card" action="index.html">
-                                    <input type="text" name="title" placeholder="Please name the new card" />
-                                    <button class="button add">Add new card</button>
-                                </form>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="list">
-                        <div class="list-header">
-                            Doing
-                            <button class="button delete">X</button>
-                        </div>
-                        <ul class="list-cards">
-                            <li class="card">
-                                Work on the wireframes
-                                <button class="button delete">X</button>
-                            </li>
-                            <li class="add-new">
-                                <form class="new-card" action="index.html">
-                                    <input type="text" name="title" placeholder="Please name the new card" />
-                                    <button class="button add">Add new card</button>
-                                </form>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="column">
-                        <div class="list">
-                            <div class="list-header">
-                                Done
-                                <button class="button delete">X</button>
-                            </div>
                             <ul class="list-cards">
                                 <li class="card">
-                                    Create a README
+                                    Improvements for the project
                                     <button class="button delete">X</button>
                                 </li>
                                 <li class="card">
-                                        Create a new domain
+                                        Creating a logotype
                                         <button class="button delete">X</button>
                                 </li>
                                 <li class="add-new">
@@ -95,14 +50,58 @@
                                     </form>
                                 </li>
                             </ul>
-                        </div>
                     </div>
-                   
+            </div>
+            
+            <div class="column">
+                    <div class="list">
+                        <div class="list-header">
+                            Doing
+                            <button class="button delete">X</button>
+                        </div>
+                            <ul class="list-cards">
+                                <li class="card">
+                                    Work on the wireframes
+                                    <button class="button delete">X</button>
+                                </li>
+                                <li class="add-new">
+                                    <form class="new-card" action="index.html">
+                                        <input type="text" name="title" placeholder="Please name the new card" />
+                                        <button class="button add">Add new card</button>
+                                    </form>
+                                </li>
+                            </ul>
                 </div>
+            </div>
+            
+            <div class="column">
+                        <div class="list">
+                                <div class="list-header">
+                                    Done
+                                    <button class="button delete">X</button>
+                                </div>
+                                <ul class="list-cards">
+                                    <li class="card">
+                                        Create a README
+                                        <button class="button delete">X</button>
+                                    </li>
+                                    <li class="card">
+                                            Create a new domain
+                                            <button class="button delete">X</button>
+                                    </li>
+                                    <li class="add-new">
+                                        <form class="new-card" action="index.html">
+                                            <input type="text" name="title" placeholder="Please name the new card" />
+                                            <button class="button add">Add new card</button>
+                                        </form>
+                                    </li>
+                                </ul>
+                        </div>
+            </div>
+                   
+    </div>
 
+    <script type="text/javascript" src="./js/app.js"></script>
 
-  
-    <script type="text/javascript" src="./js/app.js"></script></body>
-
-</body> 
+    </body> 
 </html>

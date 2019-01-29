@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
 // require('webpack-jquery-ui');
-import '../css/styles.css';
+import '../css/own.css';
 
 /**
  * jtrello
