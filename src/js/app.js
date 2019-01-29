@@ -59,7 +59,11 @@ const jtrello = (function() {
 
   function deleteList() {
     console.log("This should delete the list you clicked on");
-    $('.list').empty();
+
+    $(this).parentsUntil('.board').remove();
+    return {
+      init: init
+    };
   }
 
   /* =========== Metoder för att hantera kort i listor nedan =========== */
