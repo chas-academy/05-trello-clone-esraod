@@ -10,16 +10,23 @@
 </head>
 
 <body>
-    <div id="theTop">
-
-        <button id="srtBtn" class="beutton">Add new list</button>
-        <h1>  KANBAN </h1>
+    <div id="theTop"> 
+        <h1>  KANBAN </h1>  
+        <form class ="fixthis" id="list-creation-dialog" title="Create new list" style="height: 40px"> 
+                <button id="srtBtn" class="beutton">Add new list</button>
+                <input id="input-list-cd" type="text" name="title" placeholder="List title" />
+            </form>
+           
+               
     </div>
-    <div id="list-creation-dialog" title="Create new list" style="height: 40px">
+    <!--
+        <div id="list-creation-dialog" title="Create new list" style="height: 40px">
             <form id="list-cd"> 
                 <input id="input-list-cd" type="text" name="title" placeholder="List title" />
             </form>
-        </div>
+           
+    </div>
+-->
 
     <div class="board">
             <div class="column">
