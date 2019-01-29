@@ -63,11 +63,11 @@ const jtrello = (function() {
   function createCard(event) {
     event.preventDefault();
     console.log("This should create a new card");
-    
-    $(this).find('input').val(null);
+
+   
     var value = $(this).find('input').val();
     $(this).parent('.add-new').before('<li class="card">'+ value + '<button class="button delete">X</button>' + '</li>');
-
+    $(this).find('input').val(null);
   }
 
   function deleteCard() {
