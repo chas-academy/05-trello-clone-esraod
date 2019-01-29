@@ -2,7 +2,7 @@ html,
 body {
   background: #fafafa;
   margin: 0;
-  padding: 5px 0px 0px 10px;
+  padding: 10px 0px 0px 10px;
   font: 14px 'Comfortaa', cursive;
   color: Black;
 }
@@ -14,18 +14,16 @@ h1{
 
 #srtBtn{
     color:#4d4d4d;
-   
     border-radius: 10px;
     font-family: 'Comfortaa', cursive;
     padding: 5px;
     width: 225px;
     float: right;
     font-size: 14px;
-    margin-right: 20px;
+    margin-right: 30vw;
     letter-spacing: 3px;
     background-color: #e2e4e6;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-
 }
 
 a {
@@ -49,20 +47,40 @@ a {
   
   input {
     width: 100%;
-    border: none;
+    border:none;
     box-shadow: none;
-    border-radius: 3px;
+    border-radius: 10px;
     height: auto;
-    margin-bottom: 4px;
-    max-height: 162px;
-    min-height: 54px;
-    overflow-y: auto;
+    margin-bottom: 8px;
+    max-height: 142px;
+    min-height: 44px;
+    overflow-y: hidden;
     padding: 0;
     resize: none;
     word-wrap: break-word;
     text-indent: 8px;
   }
   
+  #input-list-cd {
+        width: 90%;
+        border:none;
+        box-shadow: none;
+        border-radius: 10px;
+        height: auto;
+        margin-bottom: 4px;
+        max-height: 142px;
+        min-height: 44px;
+        overflow-y: hidden;
+        padding: 0;
+        resize: none;
+        word-wrap: break-word;
+        text-indent: 8px;
+  }
+  
+  #list-cd {
+    margin-left: 20px;
+    width: 1000px;
+  }
   .board {
       height: 100vh;
   }
