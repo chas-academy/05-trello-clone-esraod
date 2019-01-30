@@ -37,6 +37,14 @@ const jtrello = (function() {
   function createTabs() {}
   function createDialogs() {}
 
+  function dragDropCard(){
+    console.log("This function makes user able to drag and drop cards, which allows the user to sort the cards and also move the cards between lists/columns")
+    $(".list-cards").sortable({connectWith: ".list-cards", helper: "clone", cursor:"grabbing",placeholder: "placeholder-cards",revert: true});
+  }
+
+  function dragDropList(){
+  }
+
   function effekter () {
     $(".card").on({
       mouseenter: function(){
@@ -54,6 +62,7 @@ const jtrello = (function() {
 
     });
   }
+
 
   /*
   *  Denna metod kommer nyttja variabeln DOM för att binda eventlyssnare till
@@ -168,7 +177,11 @@ const jtrello = (function() {
     createTabs();
     createDialogs();
 
+    dragDropCard();
+    dragDropList();
     effekter();
+
+
 
     bindEvents();
     
