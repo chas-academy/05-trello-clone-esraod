@@ -93,7 +93,7 @@ const jtrello = (function() {
     var valueListCreation = $('#list-creation-dialog').find('input').val();
     
     // variable with the elements for creating a new List / Column with the new value given from the input field for the list title
-    var columnList = ('<div class="column ui-sortable-handle"><div class="list"><div class="list-header">'+ valueListCreation +'<button class="button delete">X</button></div><ul class="list-cards"><li class="card">Just for trying<button class="button delete">X</button></li><li class="add-new"><form class="new-card" action="index.html"><input type="text" name="title" placeholder="Please name the new card" /><button class="button add">Add new card</button></form></li></ul></div></div>');
+    var columnList = ('<div class="column ui-sortable-handle"><div class="list"><div class="list-header">'+ valueListCreation +'<button class="button delete">X</button></div><ul class="list-cards"><li class="add-new"><form class="new-card" action="index.html"><input type="text" name="title" placeholder="Please name the new card" /><button class="button add">Add new card</button></form></li></ul></div></div>');
 
 
     //  Inserts the list elements inside the "board-class"'s ending
@@ -161,6 +161,14 @@ const jtrello = (function() {
     // Adds a new card on "before" of the input field and after the other cards in the list(colmn) with the value(title) given from the input field
     $(this).parent('.add-new').before('<li class="card">'+ value + '<button class="button delete">X</button>' + '</li>');
 
+
+
+  
+     // This fixes the Issue I had with not being able to delete cards created in the new list
+    
+     deleteCard();
+    
+
     // Set the value of the card creation input to null after submit (clears the input field)
     $(this).find('input').val(null);
 
@@ -201,6 +209,7 @@ const jtrello = (function() {
     createTabs();
     createDialogs();
 
+    
     dragDropCard();
     dragDropList();
     effekter();
