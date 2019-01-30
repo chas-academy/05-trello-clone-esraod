@@ -37,6 +37,24 @@ const jtrello = (function() {
   function createTabs() {}
   function createDialogs() {}
 
+  function effekter () {
+    $(".card").on({
+      mouseenter: function(){
+        $(this).css("background-color", "lightgray");
+      }, 
+      mouseleave: function(){
+        $(this).css("background-color", "#ffffff");
+      }, 
+      click: function(){
+        $(this).css("height", "100px", "background-color", "#ffffff");
+      },
+      dblclick: function(){
+        $(this).css("height", "16px");
+      }
+
+    });
+  }
+
   /*
   *  Denna metod kommer nyttja variabeln DOM för att binda eventlyssnare till
   *  createList, deleteList, createCard och deleteCard etc.
@@ -94,6 +112,7 @@ const jtrello = (function() {
 */
   }
 
+ 
 
 
   /* =========== Methods for the cards inside of the lists (columns)=========== */
@@ -111,7 +130,12 @@ const jtrello = (function() {
 
     // Set the value of the card creation input to null after submit (clears the input field)
     $(this).find('input').val(null);
+
+
+
+    
   }
+
 
   // Deletes a card 
   function deleteCard() {
@@ -144,8 +168,11 @@ const jtrello = (function() {
     createTabs();
     createDialogs();
 
+    effekter();
+
     bindEvents();
     
+   
   }
 
   // All kod här
