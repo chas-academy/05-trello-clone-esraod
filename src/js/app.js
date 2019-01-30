@@ -4,6 +4,7 @@ import $ from 'jquery';
 require('webpack-jquery-ui');
 import '../css/style.css';
 import { runInThisContext } from 'vm';
+import { inherits } from 'util';
 
 /**
  * jtrello
@@ -84,15 +85,15 @@ const jtrello = (function() {
   /* ============== Methods for the lists (columns) ============== */
 
   // Creates a new list (column)
-  function createList() {
+  function createList() { 
     event.preventDefault();
-    console.log("This creates a new list (column)");
+    // console.log("This creates a new list (column)");
 
     // variable for the list creation title input field's value
     var valueListCreation = $('#list-creation-dialog').find('input').val();
     
     // variable with the elements for creating a new List / Column with the new value given from the input field for the list title
-    var columnList = ('<div class="column"><div class="list"><div class="list-header">'+ valueListCreation +'<button class="button delete">X</button></div><ul class="list-cards"><li class="add-new"><form class="new-card" action="index.html"><input type="text" name="title" placeholder="Please name the new card" /><button class="button add">Add new card</button></form></li></ul></div></div>');
+    var columnList = ('<div class="column ui-sortable-handle"><div class="list"><div class="list-header">'+ valueListCreation +'<button class="button delete">X</button></div><ul class="list-cards"><li class="card">Just for trying<button class="button delete">X</button></li><li class="add-new"><form class="new-card" action="index.html"><input type="text" name="title" placeholder="Please name the new card" /><button class="button add">Add new card</button></form></li></ul></div></div>');
 
     //  Inserts the list elements inside the "board-class"'s ending
     $('.board').append(columnList);
@@ -100,6 +101,10 @@ const jtrello = (function() {
     // Set the value of the list creation input to null after submit (clears the input field)
     $('#list-creation-dialog').find('input').val(null);
       
+    // Added to run the dragDropList function again for the new lists to work with the drag drop function
+    dragDropList();
+    // Added to run the dragDropCard function again for the new lists cards to work with the drag drop function
+    dragDropCard();
   }
 
 
@@ -107,22 +112,21 @@ const jtrello = (function() {
   function deleteList() {
     console.log("This deletes the list you clicked on");
 
-   $(this).parentsUntil('.board').fadeOut(900, function() {
-    $(this).parentsUntil('.board').remove();
-  });
-
-/*
+    $(this).parentsUntil('.board').fadeOut(900, function() {
+      $(this).parentsUntil('.board').remove();
+    });
+    /*
     // Deletes list when doubleclicked on delete button
     $('.column').on('dblclick', '.delete', function () {
       $(this).parentsUntil('.board').remove();
     });
 
-
     // Fades out the list when click on delete button
     $(this).parentsUntil('.board').fadeTo(200, 1.4, function() {
       $(this).parentsUntil('.board')
     });
-*/
+    /
+
   }
 
  
@@ -144,9 +148,8 @@ const jtrello = (function() {
     // Set the value of the card creation input to null after submit (clears the input field)
     $(this).find('input').val(null);
 
-
-
-    
+   dragDropCard();
+   dragDropList();
   }
 
 
@@ -164,6 +167,7 @@ const jtrello = (function() {
     $(this).parent('.card').fadeTo(200, 0.4, function() {
       $(this).parent('.card')
     });
+
   }
 
  
@@ -184,8 +188,6 @@ const jtrello = (function() {
     dragDropCard();
     dragDropList();
     effekter();
-
-
 
     bindEvents();
     
