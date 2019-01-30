@@ -1,6 +1,7 @@
 import $ from 'jquery';
 
-// require('webpack-jquery-ui');
+//  jQuery UI from node_modules
+require('webpack-jquery-ui');
 import '../css/style.css';
 import { runInThisContext } from 'vm';
 
@@ -30,6 +31,7 @@ const jtrello = (function() {
 
     DOM.$newCardForm = $('form.new-card');
     DOM.$deleteCardButton = $('.card > button.delete');
+
   }
 
   function createTabs() {}
@@ -47,39 +49,62 @@ const jtrello = (function() {
     DOM.$deleteCardButton.on('click', deleteCard);
   }
 
-  /* ============== Metoder för att hantera listor nedan ============== */
+
+  /* ============== Methods for the lists (columns) ============== */
+
+  // Creates a new list (column)
   function createList() {
     event.preventDefault();
-    console.log("This should create a new list");
+    console.log("This creates a new list (column)");
 
-    var valueCL = $('#list-creation-dialog').find('input').val();
-    $('.board').append('<div class="column"><div class="list"><div class="list-header">'+ valueCL +'<button class="button delete">X</button></div><ul class="list-cards"><li class="add-new"><form class="new-card" action="index.html"><input type="text" name="title" placeholder="Please name the new card" /><button class="button add">Add new card</button></form></li></ul></div></div>');
+    // variable for the list creation title input field's value
+    var valueListCreation = $('#list-creation-dialog').find('input').val();
+
+    // variable with the elements for creating a new List / Column with the new value given from the input field for the list title
+    var columnList = ('<div class="column"><div class="list"><div class="list-header">'+ valueListCreation +'<button class="button delete">X</button></div><ul class="list-cards"><li class="add-new"><form class="new-card" action="index.html"><input type="text" name="title" placeholder="Please name the new card" /><button class="button add">Add new card</button></form></li></ul></div></div>');
+
+    //  Inserts the list elements inside the "board-class"'s ending
+    $('.board').append(columnList);
+    
+    // Set the value of the list creation input to null after submit (clears the input field)
     $('#list-creation-dialog').find('input').val(null);
   }
 
+
+  // Deletes a list (column)
   function deleteList() {
-    console.log("This should delete the list you clicked on");
+    console.log("This deletes the list you clicked on");
 
     $(this).parentsUntil('.board').remove();
-    return {
-      init: init
-    };
   }
 
-  /* =========== Metoder för att hantera kort i listor nedan =========== */
+
+
+  /* =========== Methods for the cards inside of the lists (columns)=========== */
+
+  // Creates a new card
   function createCard(event) {
     event.preventDefault();
-    console.log("This should create a new card");
+    console.log("This creates a new card");
 
+    // variable for the card creation title input field's value
     var value = $(this).find('input').val();
+
+    // Adds a new card on "before" of the input field and after the other cards in the list(colmn) with the value(title) given from the input field
     $(this).parent('.add-new').before('<li class="card">'+ value + '<button class="button delete">X</button>' + '</li>');
+
+    // Set the value of the card creation input to null after submit (clears the input field)
     $(this).find('input').val(null);
   }
 
+  // Deletes a card 
   function deleteCard() {
-    console.log("This should delete the card you clicked on");
+    console.log("This deletes the card you clicked on");
+
     $(this).parent('.card').remove();
   }
+
+ 
 
   // Metod för att rita ut element i DOM:en
   function render() {}
@@ -88,13 +113,14 @@ const jtrello = (function() {
 
   // Init metod som körs först
   function init() {
-    console.log(':::: Initializing JTrello ::::');
-    // Förslag på privata metoder
+    console.log(':::: Initializing jQuery Kanban ~ Esra Oktav ::::');
+    // Suggestions for private methods
     captureDOMEls();
     createTabs();
     createDialogs();
 
     bindEvents();
+    
   }
 
   // All kod här
