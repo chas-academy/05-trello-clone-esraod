@@ -121,6 +121,7 @@ a {
     white-space: normal;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     user-select: none;
+    width: 290px;
   }
   
   .list-header {
