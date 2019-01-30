@@ -107,7 +107,7 @@ const jtrello = (function() {
     $('.card > .button.delete').on('click', deleteCard);
    
     // This fixes the issue I had that did deleted the whole list including all new created cards when trying to create card inside the new list
-    $('form.new-card').on('click', createCard);
+    $('form.new-card').on('submit', createCard);
     
 
     
