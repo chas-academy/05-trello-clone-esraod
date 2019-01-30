@@ -38,11 +38,15 @@ const jtrello = (function() {
   function createDialogs() {}
 
   function dragDropCard(){
-    console.log("This function makes user able to drag and drop cards, which allows the user to sort the cards and also move the cards between lists/columns")
+
+    // This function makes user able to drag and drop cards, which allows the user to sort the cards and also move the cards between lists/columns
     $(".list-cards").sortable({connectWith: ".list-cards", helper: "clone", cursor:"grabbing",placeholder: "placeholder-cards",revert: true});
   }
 
   function dragDropList(){
+
+    // This function makes user able to drag and drop lists, which allows the user to move the list/columns order
+    $(".board").sortable({connectWith: ".board", helper: "clone", cursor:"grabbing",placeholder: "placeholder-lists",revert: true});
   }
 
   function effekter () {
