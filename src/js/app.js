@@ -164,13 +164,8 @@ const jtrello = (function() {
     // Adds a new card on "before" of the input field and after the other cards in the list(colmn) with the value(title) given from the input field
     $(this).parent('.add-new').before('<li class="card">'+ value + '<button class="button delete">X</button>' + '</li>');
 
-
-// $(this).parent('.card').appendTo('<div id="dialog" title="Basic dialog"> <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the x icon.</p></div>');
-//$('head').append('<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"><link rel="stylesheet" href="/resources/demos/style.css"><script src="https://code.jquery.com/jquery-1.12.4.js"></script><script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script><script> $( function() {$( "#dialog" ).dialog();} );</script>');
-}
   
      // This fixes the Issue I had with not being able to delete cards created in the new list
-    
      deleteCard();
     
 
