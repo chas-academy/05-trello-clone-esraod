@@ -50,7 +50,7 @@ const jtrello = (function() {
     $(".board").sortable({connectWith: ".board", helper: "clone", cursor:"grabbing",placeholder: "placeholder-lists",revert: true});
   }
 
-  function effekter () {
+  function effekter() {
     $(".card").on({
       mouseenter: function(){
         $(this).css("background-color", "lightgray");
@@ -99,7 +99,7 @@ const jtrello = (function() {
     //  Inserts the list elements inside the "board-class"'s ending
     $('.board').append(columnList);
 
-    
+   
     // This fixes the issue I had with not being able to delete new created lists
     $('.list-header > .button.delete').on('click', deleteList);
   
@@ -107,13 +107,16 @@ const jtrello = (function() {
     $('.card > .button.delete').on('click', deleteCard);
    
     // This fixes the issue I had that did deleted the whole list including all new created cards when trying to create card inside the new list
+    $('form.new-card').unbind();
     $('form.new-card').on('submit', createCard);
-    
+   
+   
 
     
     // Set the value of the list creation input to null after submit (clears the input field)
     $('#list-creation-dialog').find('input').val(null);
       
+    
    
     // Added to run the dragDropList function again for the new lists to work with the drag drop function
     dragDropList();
@@ -128,7 +131,7 @@ const jtrello = (function() {
   function deleteList() {
     console.log("This deletes the list you clicked on");
 
-    $(this).parentsUntil('.board').fadeOut(900, function() {
+    $(this).parentsUntil('.board').toggle("droppable", function() {
       $(this).parentsUntil('.board').remove();
     });
     /*
@@ -162,7 +165,9 @@ const jtrello = (function() {
     $(this).parent('.add-new').before('<li class="card">'+ value + '<button class="button delete">X</button>' + '</li>');
 
 
-
+// $(this).parent('.card').appendTo('<div id="dialog" title="Basic dialog"> <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the x icon.</p></div>');
+//$('head').append('<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"><link rel="stylesheet" href="/resources/demos/style.css"><script src="https://code.jquery.com/jquery-1.12.4.js"></script><script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script><script> $( function() {$( "#dialog" ).dialog();} );</script>');
+}
   
      // This fixes the Issue I had with not being able to delete cards created in the new list
     
@@ -209,13 +214,12 @@ const jtrello = (function() {
     createTabs();
     createDialogs();
 
-    
+  
     dragDropCard();
     dragDropList();
     effekter();
 
     bindEvents();
-    
    
   }
 
