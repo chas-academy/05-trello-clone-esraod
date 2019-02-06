@@ -8,23 +8,23 @@ body {
 }
 
 h1{
-    width: 125px;
-    padding-left: 15px;
+  width: 125px;
+  padding-left: 15px;
 }
 
 #new-list{
-    color:#4d4d4d;
-    border-radius: 150px 0px 0px 150px;
-    font-family: 'Comfortaa', cursive;
-    padding:5px;
-    width: 200px;
-    float: right;
-    font-size: 14px;
-    /*margin-right: 30vw;*/
-    letter-spacing: 3px;
-    background-color: #e2e4e6;
-    margin: px 10px 10px 125px;
-    height: 30px
+  color:#4d4d4d;
+  border-radius: 150px 0px 0px 150px;
+  font-family: 'Comfortaa', cursive;
+  padding:5px;
+  width: 200px;
+  float: right;
+  font-size: 14px;
+  /*margin-right: 30vw;*/
+  letter-spacing: 3px;
+  background-color: #e2e4e6;
+  margin: px 10px 10px 125px;
+  height: 30px
 }
 
 a {
@@ -36,14 +36,14 @@ a {
   }
   
   ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
   
-  ul li {
-      margin: 0;
-      padding: 0;
+ul li {
+    margin: 0;
+    padding: 0;
   }
   
   input {
@@ -60,42 +60,40 @@ a {
     resize: none;
     word-wrap: break-word;
     text-indent: 8px;
+    outline: none;
+    font-family: 'Comfortaa', cursive;
   }
   
   #input-list-cd {
-        width: 190px;
-        border:none;
-        box-shadow: none;
-        border-radius: 10px;
-       /* height: auto;*/
-        margin-bottom: 4px;
-        max-height: 30px;
-        min-height: 30px;
-        padding: 0;
-        resize: none;
-        word-wrap: break-word;
-        text-indent: 8px;
-        border-radius: 150px 0px 0px 150px;    
+    width: 190px;
+    border:none;
+    box-shadow: none;
+    border-radius: 10px;
+    /* height: auto;*/
+    margin-bottom: 4px;
+    max-height: 30px;
+    min-height: 30px;
+    padding: 0;
+    resize: none;
+    word-wrap: break-word;
+    text-indent: 8px;
+    border-radius: 150px 0px 0px 150px;    
   }
 
   .fixthis {
-     margin-left: 60px;
-     padding-top:12px;
+    margin-left: 60px;
+    padding-top:12px;
   }
   #theTop{
-      display: inline-flex;
-      justify-content: space-between;
-      width: 100vw;
-  }
-  #list-cd {
-   
-   
-
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100vw;
   }
 
+  
   .board {
-      width: 100vw;
-      height: 100vh;
+    width: 100vw;
+    height: 100vh;
   }
   
   .column {
@@ -105,7 +103,6 @@ a {
     box-sizing: border-box;
     display: inline-flex;
     vertical-align: top;
- 
     /*white-space: nowrap;*/
     
   }
@@ -136,7 +133,7 @@ a {
   
   .list-header .delete {
     position: absolute;
-    top: 10px;
+    top: 7px;
     right: 10px;
     padding: 6px;
   }
@@ -183,31 +180,7 @@ a {
     right: 10px;
     padding: 2px 1px;
   }
-  
-  .ui-dialog {
-    background: #e2e4e6;
-    border-radius: 3px;
-    padding: 10px;
-    z-index: 50;
-  }
-  
-  .ui-dialog .ui-dialog-titlebar {
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .ui-dialog .ui-dialog-titlebar-close {
-    display: none;
-  }
-  
-  .ui-dialog input {
-    min-height: 24px;
-  }
-  
-  .ui-dialog button {
-    margin-right: 8px;
-  }
-  
+
   .ui-button,
   .button {
     display: inline-flex;
@@ -230,8 +203,10 @@ a {
     justify-content: center;
     align-items: center;
     flex: 0 0 160px;
-  }
-  
+    background-color: transparent;
+    font-family: 'Comfortaa', cursive;
+  } 
+
   .ui-sortable-placeholder {
     display: block;
     background-color: rgba(0, 0, 0, 0.2);
@@ -244,4 +219,36 @@ a {
     cursor: grabbing;
     box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.3), 0px 0px 1px rgba(0, 0, 0, 0.5);
     transform: rotate(4deg);
+  }
+
+  textarea, input.datep{
+    /* background: #e2e4e6; */
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    border-radius: 5px;
+    height: auto;
+    margin-bottom: 4px;
+    max-height: 142px;
+    min-height: 44px;
+    overflow-y: hidden;
+    padding: 0;
+    resize: none;
+    word-wrap: break-word;
+    text-indent: 8px;
+    outline: none; 
+  }
+  
+  textarea {
+    padding-top: 8px;
+    padding-left: 2px;
+    overflow-y: scroll;
+  }
+
+  button:focus, button:active { 
+    outline: none; 
+  }
+
+  .ui-dialog .ui-dialog-titlebar-close {
+    padding: 0px 10px 0px 2px !important;
   }
