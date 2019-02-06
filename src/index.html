@@ -1,171 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>kanban - EOD</title>
-    <link href="./css/style.css" rel="stylesheet" type="text/html">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
-    <!-- <script type="text/javascript" src="./js/app.js"></script> -->
-   
-</head>
 
-<body>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>kanban - EOD</title>
+      <link href="./css/style.css" rel="stylesheet" type="text/html">
+      <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet"> 
+  </head>
+
+  <body>
     <div id="theTop"> 
-        <h1>  KANBAN </h1>  
-        <form class ="fixthis" id="list-creation-dialog" title="Create new list" style="height: 40px"> 
-            <button id="new-list" class="button">Add new list</button>
-            <input id="input-list-cd" type="text"  name="title" placeholder="List title..." />
-        </form>
+      <h1>  KANBAN </h1>  
+      <form class="fixthis" id="list-creation-dialog" title="Create new list" style="height: 40px"> 
+        <button id="new-list" class="button">Add new list</button>
+        <input id="input-list-cd" type="text"  name="title" placeholder="List title..."  required/>
+      </form>
     </div>
-
-    <!--
-    <div id="list-creation-dialog" title="Create new list" style="height: 40px">
-            <form id="list-cd"> 
-                <input id="input-list-cd" type="text" name="title" placeholder="List title" />
-            </form>      
-    </div>
-    -->
 
     <div class="board">
 
-        <!--
-        <div class="column">
-            <div class="list">
-                <div class="list-header">
-                    Requirements
-                    <button class="button delete">X</button>
-                </div>
-                    <ul class="list-cards">
-                        <li class="card">
-                            datepicker 
-                            <button class="button delete">X</button>
-                        </li>
-                        <li class="card">
-                            dialog
-                            <button class="button delete">X</button>
-                        </li>
-                        <li class="card">
-                            tabs
-                            <button class="button delete">X</button>
-                        </li>
-                        <li class="card">
-                            1 self created simple jQ UI widget
-                            <button class="button delete">X</button>
-                        </li>
-                        <li class="add-new">
-                            <form class="new-card" action="index.html">
-                                <input type="text" name="title" placeholder="Please name the new card" />
-                                <button class="button add">Add new card</button>
-                            </form>
-                        </li>
-                    </ul>
+
+      <div class="column">
+        <div class="list">
+
+          <div class="list-header">
+            Todo
+            <button class="button delete">✖</button>
+          </div>
+
+          <ul class="list-cards">
+            <li class="add-new">
+              <form class="new-card" action="index.html">
+                <input type="text" name="title" placeholder="Please name the new card" />
+                <button class="button add">Add new card</button>
+              </form>
+            </li>
+          </ul>
+
         </div>
+      </div>
+         
+      
+      <div class="column">
+        <div class="list">
+
+          <div class="list-header">
+            Doing
+            <button class="button delete">✖</button>
+          </div>
+
+          <ul class="list-cards">
+            <li class="add-new">
+              <form class="new-card" action="index.html">
+                <input type="text" name="title" placeholder="Please name the new card" />
+                <button class="button add">Add new card</button>
+              </form>
+            </li>
+          </ul>
+
         </div>
-        -->
+      </div>
 
 
-            <div class="column">
-                    <div class="list">
-                        <div class="list-header">
-                            Todo
-                            <button class="button delete">X</button>
-                        </div>
-                            <ul class="list-cards">
-                                <!--
-                                <li class="card">
-                                        Click on a card(dialog)
-                                        <button class="button delete">X</button>
-                                </li>
-                                <li class="card">
-                                    Look at different tabs
-                                    <button class="button delete">X</button>
-                                </li>
-                                <li class="card">
-                                    Set deadline (datepicker)
-                                    <button class="button delete">X</button>
-                                </li>
-                                -->
-                                <li class="add-new">
-                                    <form class="new-card" action="index.html">
-                                        <input type="text" name="title" placeholder="Please name the new card" />
-                                        <button class="button add">Add new card</button>
-                                    </form>
-                                </li>
-                            </ul>
-                    </div>
-            </div>
-            
-            <div class="column">
-                    <div class="list">
-                        <div class="list-header">
-                            Doing
-                            <button class="button delete">X</button>
-                        </div>
-                            <ul class="list-cards">
-                            <!--
-                                <li class="card">
-                                    2 effects
-                                    <button class="button delete">X</button>
-                                </li>
-                            -->
-                                <li class="add-new">
-                                    <form class="new-card" action="index.html">
-                                        <input type="text" name="title" placeholder="Please name the new card" />
-                                        <button class="button add">Add new card</button>
-                                    </form>
-                                </li>
-                            </ul>
-                </div>
-            </div>
+      <div class="column">
+        <div class="list">
 
-           
+          <div class="list-header">
+            Done
+            <button class="button delete">✖</button>
+          </div>
 
+          <ul class="list-cards">
+            <li class="add-new">
+              <form class="new-card" action="index.html">
+                <input type="text" name="title" placeholder="Please name the new card" />
+                <button class="button add">Add new card</button>
+              </form>
+            </li>
+          </ul>
 
-            
-                    <div class="column">
-                                <div class="list">
-                                        <div class="list-header">
-                                            Done
-                                            <button class="button delete">X</button>
-                                        </div>
-                                        <ul class="list-cards">
-                                             <!--
-                                            <li class="card">
-                                                User can create new cards
-                                                <button class="button delete">X</button>
-                                                
-                                            </li>
-                                            <li class="card">
-                                                Create new columns (lists)
-                                                <button class="button delete">X</button>
-                                            </li>
-                                            <li class="card">
-                                                Drag cards between columns
-                                                <button class="button delete">X</button>
-                                            </li>
-                                            <li class="card">
-                                                Drag&drop 
-                                                <button class="button delete">X</button>
-                                            </li>
-                                            -->
-                                            <li class="add-new">
-                                                <form class="new-card" action="index.html">
-                                                    <input type="text" name="title" placeholder="Please name the new card" />
-                                                    <button class="button add">Add new card</button>
-                                                </form>
-                                            </li>
-                                        </ul>
-                                </div>
-                    </div>
-                
+        </div>
+      </div>
+    
+      
     </div>
 
 
-<footer style="text-align:center; padding:20px;">
-    <span style="color:gray;"> &copy; 2019  Assignment (Kanban board)</span>
-    Esra Oktav
-</footer>
-    </body> 
+    <footer style="text-align:center; padding:20px;">
+      <span style="color:gray;"> &copy; 2019  Assignment (Kanban board)</span>
+      Esra Oktav
+    </footer>
+
+  </body> 
 </html>
