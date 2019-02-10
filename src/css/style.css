@@ -3,7 +3,7 @@ body {
   background: #f1f1f1;
   margin: 0;
   font: 14px "Comfortaa", cursive;
-  color: #44BFA6;
+  color: #ffd800;
 
   /* padding: 10px 0px 0px 10px; */
   /* padding: 4px; */
@@ -203,7 +203,7 @@ input {
   width: 30%;
   padding: 13.5px;
   border-radius: 0px 4px 20px 0px;
-  background-color:#44BFA6;
+  background-color:#ffd800;
   color: #ffffff;
   letter-spacing: 2px;
 }
@@ -277,7 +277,9 @@ input {
   transform: rotate(4deg);
 }
 
-
+.darkbutton{
+  background-color: #44bfa6 !important;
+}
 .darkModeBody{
   background: #0e0e0e;
   color:#44BFA6;
