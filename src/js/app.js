@@ -279,7 +279,7 @@ const jtrello = (function () {
         $('.list , .list-header').toggleClass('darkModeone');
         $('button.new-list').toggleClass('darkModeone');
         $('.darkMode').toggleClass('lightMode');
-        $('.list-cards .add-new .button').toggleClass('darkbutton');
+        $('.add-new .button').toggleClass('darkbutton');
       });
     }
 

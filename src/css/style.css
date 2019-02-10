@@ -195,6 +195,10 @@ input {
 
 .list-cards .add-new {
   margin: 10px 0;
+ 
+}
+.add-new .button {
+background-color:#ffd800;
 }
 
 .list-cards .add-new .button {
@@ -203,7 +207,7 @@ input {
   width: 30%;
   padding: 13.5px;
   border-radius: 0px 4px 20px 0px;
-  background-color:#ffd800;
+  
   color: #ffffff;
   letter-spacing: 2px;
 }
@@ -277,8 +281,8 @@ input {
   transform: rotate(4deg);
 }
 
-.darkbutton{
-  background-color: #44bfa6 !important;
+.button.darkbutton{
+  background-color: #44bfa6;
 }
 .darkModeBody{
   background: #0e0e0e;
