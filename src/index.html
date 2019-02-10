@@ -8,20 +8,29 @@
       <title>kanban - EOD</title>
       <link href="./css/style.css" rel="stylesheet" type="text/html">
       <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet"> 
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
   </head>
 
-  <body>
+  <body >
     <div id="theTop"> 
       <h1>  KANBAN </h1>  
+      <span class="fix"  title="Create new list" style="height: 40px"> 
+        
+      <button class="darkMode" class="buttone"><i class="fas fa-moon" style="font-size:16px;"></i></button>
+    
       <form class="fixthis" id="list-creation-dialog" title="Create new list" style="height: 40px"> 
-        <button id="new-list" class="button">Add new list</button>
-        <input id="input-list-cd" type="text"  name="title" placeholder="List title..."  required/>
+        <button class="new-list" class="button">Add new list</button>
+        <input id="input-list" type="text"  name="title" placeholder="List title..."  required/>
       </form>
+
+    </span>
     </div>
+    
 
     <div class="board">
 
-
+    
       <div class="column">
         <div class="list">
 
@@ -33,8 +42,8 @@
           <ul class="list-cards">
             <li class="add-new">
               <form class="new-card" action="index.html">
-                <input type="text" name="title" placeholder="Please name the new card" />
-                <button class="button add">Add new card</button>
+                <input type="text" name="title" placeholder="Create a new card..." />
+                <button class="button add">Add</button>
               </form>
             </li>
           </ul>
@@ -54,8 +63,8 @@
           <ul class="list-cards">
             <li class="add-new">
               <form class="new-card" action="index.html">
-                <input type="text" name="title" placeholder="Please name the new card" />
-                <button class="button add">Add new card</button>
+                <input type="text" name="title" placeholder="Create a new card..." />
+                <button class="button add">Add</button>
               </form>
             </li>
           </ul>
@@ -75,8 +84,8 @@
           <ul class="list-cards">
             <li class="add-new">
               <form class="new-card" action="index.html">
-                <input type="text" name="title" placeholder="Please name the new card" />
-                <button class="button add">Add new card</button>
+                <input type="text" name="title" placeholder="Create a new card..." />
+                <button class="button add">Add</button>
               </form>
             </li>
           </ul>
@@ -88,7 +97,7 @@
     </div>
 
 
-    <footer style="text-align:center; padding:20px;">
+    <footer>
       <span style="color:gray;"> &copy; 2019  Assignment (Kanban board)</span>
       Esra Oktav
     </footer>
